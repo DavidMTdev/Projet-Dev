@@ -31,6 +31,28 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="Function/fct_categorie_plante.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Function/fct_description.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Function/fct_floraison.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Function/fct_humidite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Function/fct_luminosite.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Function/fct_temperature.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="header.h" />
+		<Unit filename="liste_plante.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
