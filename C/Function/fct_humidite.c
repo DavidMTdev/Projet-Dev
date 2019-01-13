@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "../header.h"
 
-void Humiditer(int *humidite_plante,int *luminosite_plante,int *temperature_plante,int humidite)
+void Humiditer(int *humidite_plante,int humidite)
 {
     if (*humidite_plante < humidite)
     {

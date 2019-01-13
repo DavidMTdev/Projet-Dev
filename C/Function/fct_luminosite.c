@@ -2,11 +2,11 @@
 #include <stdlib.h>
 #include "../header.h"
 
-void Luminositer(int *humidite_plante,int *luminosite_plante,int *temperature_plante,int luminosite)
+void Luminositer(int *luminosite_plante,int luminosite)
 {
     if (*luminosite_plante < luminosite)
     {
-        printf("Il y a trop du lumiere sur votre plante !\n");
+        printf("Il y a trop de lumiere sur votre plante !\n");
     }
     else if (*luminosite_plante > luminosite)
     {

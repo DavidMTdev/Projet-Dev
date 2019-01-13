@@ -2,19 +2,47 @@
 #include <stdlib.h>
 #include "../header.h"
 
-int floraison()
+int Floraison(int *floraison_plante, int mois)
 {
-    int janvier = 1;
-    int fevrier = 2;
-    int mars = 3;
-    int avril = 4;
-    int mai = 5;
-    int juin = 6;
-    int juillet = 7;
-    int aout = 8;
-    int septembre = 9;
-    int octobre = 10;
-    int novombre = 11;
-    int decembre = 12;
+    int count = 0;
+
+    for(int i = 0; i < 12; i++)
+        {
+            if (floraison_plante[i] >= 1 && floraison_plante[i] <= 12) {
+                count ++;
+            }
+
+        }
+
+    int mois_de_floraison[count];
+
+    for(int i = 0; i < count; i++)
+    {
+        mois_de_floraison[i] = floraison_plante[i];
+    }
+ 
+    if (count == 1) {
+        
+        if (mois_de_floraison[0] == mois) {
+            printf("La plante est dans son mois de floraison\n");
+        }
+        else
+        {
+            printf("La plante n'est pas dans son mois de floraison\n");
+        }
+        
+    }
+    else
+    {
+
+        if (mois_de_floraison[0] <= mois && mois_de_floraison[count - 1] >= mois) {
+        printf("La plante est dans son mois de floraison\n");
+        }
+        else
+        {
+        printf("La plante n'est pas dans son mois de floraison\n");
+        }
+
+    }
 
 }
