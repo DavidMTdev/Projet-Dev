@@ -4,6 +4,7 @@
 
 int main()
 {
+    menu();
     int plante = 1;
     int *humidite_plante;
     int *luminosite_plante;
