@@ -20,3 +20,10 @@ Contenu du rendu intermédiaire N°1 :
 -Un document descriptif du rendu de chaque membre du groupe 
 -Algorigramme 
 -Algorithme en langage C 
+
+
+Contenu du rendu intermédiaire N°2 :
+- Document descriptif du rendu intermédiaire de chaque membre du groupe
+- Interface graphique en langage C 
+- Fonction caractéristiques pour chacune des plantes 
+- Listing de toutes les plantes en langage C 
