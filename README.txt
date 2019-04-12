@@ -27,3 +27,9 @@ Contenu du rendu intermédiaire N°2 :
 - Interface graphique en langage C 
 - Fonction caractéristiques pour chacune des plantes 
 - Listing de toutes les plantes en langage C 
+
+
+Contenu du rendu intermédiaire N°3 :
+- Document descriptif du rendu intermédiaire de chaque membre du groupe
+- Modélisation de la base de données (MCD & MLD) 
+
