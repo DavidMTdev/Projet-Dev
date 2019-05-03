@@ -33,3 +33,9 @@ Contenu du rendu intermédiaire N°3 :
 - Document descriptif du rendu intermédiaire de chaque membre du groupe
 - Modélisation de la base de données (MCD & MLD) 
 
+Contenu du rendu intermédiaire N°4 :
+- Modélisation de la base de données en SQL
+- Pour vous connecter afin d'accéder a la base de données vous devrez changer le connect system/ dans le document PLANTE_Install.sql
+- Pour lancer les scripts sql cliquez sur le fichier Plante_install.bat
+- Le fichier PLANTE_Install.log est une copie de l'ensemble des lignes SQL exécutées
+
