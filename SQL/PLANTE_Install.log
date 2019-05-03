@@ -1,0 +1,1072 @@
+SQL> -- connexion en tant que SYSTEM
+SQL> CONNECT system/tellora
+Connecté.
+SQL> 
+SQL> @ Table_Plante
+SQL> drop table UTILISATEUR cascade constraint;
+
+Table supprimée.
+
+SQL> drop table CHOISIR cascade constraint;
+
+Table supprimée.
+
+SQL> drop table PLANTE cascade constraint;
+
+Table supprimée.
+
+SQL> drop table POSSEDER cascade constraint;
+
+Table supprimée.
+
+SQL> drop table CARACTERISTIQUE cascade constraint;
+
+Table supprimée.
+
+SQL> 
+SQL> create table UTILISATEUR (
+  2    ID_UTILISATEUR integer not null,
+  3    NOM_UTILISATEUR varchar2(30) not null,
+  4    PRENOM_UTILISATEUR varchar2(20) null,
+  5    constraint pk_utilisateur primary key(ID_UTILISATEUR)
+  6  );
+
+Table créée.
+
+SQL> 
+SQL> create table PLANTE (
+  2    ID_PLANTE integer not null,
+  3    NOM_PLANTE varchar2(150) not null,
+  4    DESCRIPTION_PLANTE varchar2(200) null,
+  5    FAMILLE_PLANTE varchar2(150) not null,
+  6    constraint pk_plante primary key(ID_PLANTE)
+  7  );
+
+Table créée.
+
+SQL> 
+SQL> create table CARACTERISTIQUE(
+  2    ID_CARACTERISTIQUE integer not null,
+  3    HUMIDITE integer not null,
+  4    TEMPERATURE integer not null,
+  5    LUMINOSITE integer not null,
+  6    MOIS_FLORAISON varchar2(120) not null,
+  7    constraint pk_caracteristique primary key(ID_CARACTERISTIQUE)
+  8  );
+
+Table créée.
+
+SQL> 
+SQL> create table CHOISIR(
+  2    ID_PLANTE integer not null,
+  3    ID_UTILISATEUR integer null,
+  4    constraint pk_choisir primary key(ID_PLANTE, ID_UTILISATEUR),
+  5    constraint fk_choisir foreign key(ID_PLANTE)
+  6    references PLANTE(ID_PLANTE),
+  7    constraint fk_choisirbis foreign key(ID_UTILISATEUR)
+  8    references UTILISATEUR(ID_UTILISATEUR)
+  9  );
+
+Table créée.
+
+SQL> 
+SQL> create table POSSEDER(
+  2    ID_PLANTE integer not null,
+  3    ID_CARACTERISTIQUE integer not null,
+  4    constraint pk_posseder primary key(ID_PLANTE, ID_CARACTERISTIQUE),
+  5    constraint fk_posseder foreign key(ID_PLANTE)
+  6    references PLANTE(ID_PLANTE),
+  7    constraint fk_possederbis foreign key(ID_CARACTERISTIQUE)
+  8    references CARACTERISTIQUE(ID_CARACTERISTIQUE)
+  9  );
+
+Table créée.
+
+SQL> @ Sequence_Plante
+SQL> drop sequence id_utilisateur_sequence;
+
+Séquence supprimée.
+
+SQL> 
+SQL> create sequence id_utilisateur_sequence
+  2  increment by 1
+  3  start with 1;
+
+Séquence créée.
+
+SQL> 
+SQL> drop sequence id_plante_sequence;
+
+Séquence supprimée.
+
+SQL> 
+SQL> create sequence id_plante_sequence
+  2  increment by 1
+  3  start with 1;
+
+Séquence créée.
+
+SQL> 
+SQL> drop sequence id_caracte_sequence;
+
+Séquence supprimée.
+
+SQL> 
+SQL> create sequence id_caracte_sequence
+  2  increment by 1
+  3  start with 1;
+
+Séquence créée.
+
+SQL> 
+SQL> drop sequence id_plante_posseder_sequence;
+
+Séquence supprimée.
+
+SQL> 
+SQL> create sequence id_plante_posseder_sequence
+  2  increment by 1
+  3  start with 1;
+
+Séquence créée.
+
+SQL> 
+SQL> drop sequence id_caracte_posseder_sequence;
+
+Séquence supprimée.
+
+SQL> 
+SQL> create sequence id_caracte_posseder_sequence
+  2  increment by 1
+  3  start with 1;
+
+Séquence créée.
+
+SQL> 
+SQL> drop sequence id_plante_choisir_sequence;
+
+Séquence supprimée.
+
+SQL> 
+SQL> create sequence id_plante_choisir_sequence
+  2  increment by 1
+  3  start with 1;
+
+Séquence créée.
+
+SQL> @ Insert_Plante
+SQL> insert into utilisateur values(id_utilisateur_sequence.nextval,'DA SILVA TEIXEIRA','David');
+
+1 ligne créée.
+
+SQL> insert into utilisateur values(id_utilisateur_sequence.nextval,'RICHARD','Jeremy');
+
+1 ligne créée.
+
+SQL> insert into utilisateur values(id_utilisateur_sequence.nextval,'Peyre','Leo');
+
+1 ligne créée.
+
+SQL> 
+SQL> commit;
+
+Validation effectuée.
+
+SQL> 
+SQL> insert into plante values(id_plante_sequence.nextval,'Butome en ombelle','Plante vivace de 50 cm Ã  1 mÃ¨tre, glabre, Ã  souchehorizontale charnue','Butomaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Muguet','Plante vivace de 30-60 cm, glabre, Ã  souche horizontale Ã©paisse trÃ¨s fibreuse','Asparagaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Digitale pourpre','Plante bisannuelle ou vivace de 50 cm Ã  1 m. 50, tomenteuse-blanchÃ¢tre, Ã  tige robuste, creuse, lÃ¢chement feuillÃ©e','Plantaginaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'AspÃ©rule odorante','Plante vivace de 10-30 cm, glabre, noirÃ¢tre et odorante aprÃ¨s la dessiccation, Ã  souche grÃªle, longuement traÃ§ante','Rubiaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Lierre terrestre','Plante vivace, mollement poilue, couchÃ©e-radicante, Ã  tiges florifÃ¨res redressÃ©es, simples, longues de 5-25 cm','Lamiaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Cannabis','Plante annuelle de 1-2 mÃ¨tres, pubescente-rude, Ã  odeur forte','Cannabaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Houblon','Plante vivace de 2-5 mÃ¨tres, rude, Ã  tiges herbacÃ©es, sarmenteuses-volubiles, rameuses','Cannabaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Hysope','Plante vivace de 20-50 cm, glabre ou glabrescente, verte, aromatique','Lamiaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Iris fÃ©tide','Plante vivace de 30-80 cm, glabre, fÃ©tide par le froissement, Ã  rhizome Ã©pais','Iridaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Iris faux acore','Plante vivace de 40 cm Ã  1 mÃ¨tre, glabre, inodore, Ã  rhizome Ã©pais','Iridaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Knautie des champs','Plante vivace de 20-80 cm, velue, Ã  souche Ã©paisse et oblique','Caprifoliaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Gesse des bois','Plante vivace de 1 Ã  2 mÃ¨tres, glabre','Gesse des bois');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Salicaire commune','Plante vivace de 50 cm, Ã  1 mÃ¨tre, dressÃ©e, robuste, pubescente dans le haut, Ã  souche Ã©paisse','Lythraceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Menthe pouliot','Plante vivace de 10-50 cm, velue-grisÃ¢tre ou glabrescente, Ã  odeur trÃ¨s forte','Lamiaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Origan commun','Plante vivace de 30-80 cm, poilue, souvent rougeÃ¢tre, aromatique','Lamiaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'AnÃ©mone pulsatille','Fleur mÃ©dicinale vivace','AnÃ©mone pulsatille');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Sauge des prÃ©s','Plante vivace de 35-80 cm, velue, simple ou peu rameuse, odorante','Lamiaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Scabieuse blanchÃ¢tre','Plante vivace de 20-40 cm, glabrescente, Ã  tiges peu rameuses, feuillÃ©es','Caprifoliaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'SilÃ¨ne penchÃ©','Plante vivace, velue, Ã  souche presque ligneuse tiges de 20-50 cm, simples ou peu rameuses, visqueuses dans le haut, peu feuillÃ©es','Caryophyllaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Ã‰piaire des bois','Ortie puante. Plante vivace de 30 cm Ã  1 mÃ¨tre, trÃ¨s velue, verte, Ã  souche rampante, Ã  odeur fÃ©tide','Ã‰piaire des bois');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Petite pervenche','Plante vivace, glabre, couchÃ©e-diffuse, Ã  tiges persistantes, radicantes, longues de 1-2 mÃ¨tres','Apocynaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Violette des chiens','Tiges de 5-40 cm, herbacÃ©es, dressÃ©es ou ascendantes, naissant de la souche','Violaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Fusain dâ€™Europe','Rameaux tÃ©tragones, verts feuilles moyennes, de 4-0 cm de long, elliptiques ou ovales-lancÃ©olÃ©es','Celastraceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Rosier des chiens','Arbrisseau de 1 Ã  3 mÃ¨tres, gÃ©nÃ©ralement verdÃ¢tre et Ã  rameaux robustes, dressÃ©s','Rosaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Rosier pimprenelle','Arbrisseau peu Ã©levÃ©, souvent nain, Ã  souche traÃ§ante, aiguillons nombreux, droits, inÃ©gaux, entremÃªlÃ©s d acicules','Rosaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Viorne obier','Arbrisseau de 2-4 mÃ¨tres, Ã  rameaux fragiles, glabres, d un gris blanchÃ¢tre, Viorne obier','Viorne obier');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'AchillÃ©e millefeuille','Plante vivace Ã  racine rampante tiges de 2-7 dm, dressÃ©es, pubescentes, parfois laineuses ainsi que les feuilles','Asteraceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Bugle de GenÃ¨ve','Plante vivace de 10-40 cm, inodore, sans rejets rampants tiges dressÃ©es, simples, velues-laineuses tout autour, peu feuillÃ©es','Lamiaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'Guimauve officinale','Plante vivace, toute veloutÃ©e-blanchÃ¢tre, Ã  racine Ã©paisse, blanche tiges d environ 1 mÃ¨tre, dressÃ©es, robustes, Malvaceae','Malvaceae');
+
+1 ligne créée.
+
+SQL> insert into plante values(id_plante_sequence.nextval,'PÃ¢querette','Plante Ã  fibres, trÃ¨s grÃªles tiges, mesure 3-10 cm rarement plus, grÃªles','Asteraceae');
+
+1 ligne créée.
+
+SQL> 
+SQL> commit;
+
+Validation effectuée.
+
+SQL> 
+SQL> insert into caracteristique(id_caracte_sequence.nextval,7,4,7,'Juin â€“ AoÃ»t');
+insert into caracteristique(id_caracte_sequence.nextval,7,4,7,'Juin â€“ AoÃ»t')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,2,2,6,'Mai -Juillet');
+insert into caracteristique(id_caracte_sequence.nextval,2,2,6,'Mai -Juillet')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,3,5,5,'Mai -Septembre');
+insert into caracteristique(id_caracte_sequence.nextval,3,5,5,'Mai -Septembre')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,3,4,2,'Mai â€“ Juin');
+insert into caracteristique(id_caracte_sequence.nextval,3,4,2,'Mai â€“ Juin')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,4,4,4,'Mars â€“ Mai');
+insert into caracteristique(id_caracte_sequence.nextval,4,4,4,'Mars â€“ Mai')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,3,5,7,'Juin-Septembre');
+insert into caracteristique(id_caracte_sequence.nextval,3,5,7,'Juin-Septembre')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,2,2,7,'Juin â€“ Septembre');
+insert into caracteristique(id_caracte_sequence.nextval,2,2,7,'Juin â€“ Septembre')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,2,6,4,'Juillet -AoÃ»t');
+insert into caracteristique(id_caracte_sequence.nextval,2,6,4,'Juillet -AoÃ»t')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,6,4,6,'Mai â€“ Juillet');
+insert into caracteristique(id_caracte_sequence.nextval,6,4,6,'Mai â€“ Juillet')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,2,4,6,'Avril â€“ Juillet');
+insert into caracteristique(id_caracte_sequence.nextval,2,4,6,'Avril â€“ Juillet')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,3,5,5,'Juin â€“ AoÃ»t');
+insert into caracteristique(id_caracte_sequence.nextval,3,5,5,'Juin â€“ AoÃ»t')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,4,4,6,'Juin â€“ AoÃ»t');
+insert into caracteristique(id_caracte_sequence.nextval,4,4,6,'Juin â€“ AoÃ»t')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,5,6,7,'Juin â€“ Septembre');
+insert into caracteristique(id_caracte_sequence.nextval,5,6,7,'Juin â€“ Septembre')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,3,4,5,'Juillet â€“ Octobre');
+insert into caracteristique(id_caracte_sequence.nextval,3,4,5,'Juillet â€“ Octobre')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,1,5,7,'Juillet â€“ Septembre');
+insert into caracteristique(id_caracte_sequence.nextval,1,5,7,'Juillet â€“ Septembre')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,2,6,7,'Avril â€“ Juin');
+insert into caracteristique(id_caracte_sequence.nextval,2,6,7,'Avril â€“ Juin')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,2,5,7,'Mai â€“ Juillet');
+insert into caracteristique(id_caracte_sequence.nextval,2,5,7,'Mai â€“ Juillet')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,3,5,5,'Juillet â€“ Septembre');
+insert into caracteristique(id_caracte_sequence.nextval,3,5,5,'Juillet â€“ Septembre')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,4,4,3,'Mai â€“ Juillet');
+insert into caracteristique(id_caracte_sequence.nextval,4,4,3,'Mai â€“ Juillet')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,3,5,2,'Juin â€“ Septembre');
+insert into caracteristique(id_caracte_sequence.nextval,3,5,2,'Juin â€“ Septembre')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,3,5,2,'FÃ©vrier-Mai');
+insert into caracteristique(id_caracte_sequence.nextval,3,5,2,'FÃ©vrier-Mai')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,3,4,6,'Avril â€“ Juin');
+insert into caracteristique(id_caracte_sequence.nextval,3,4,6,'Avril â€“ Juin')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,3,4,5,'Avril â€“ Mai');
+insert into caracteristique(id_caracte_sequence.nextval,3,4,5,'Avril â€“ Mai')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,3,4,6,'Mai â€“ Juin');
+insert into caracteristique(id_caracte_sequence.nextval,3,4,6,'Mai â€“ Juin')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,2,5,5,'Juin â€“ Juillet');
+insert into caracteristique(id_caracte_sequence.nextval,2,5,5,'Juin â€“ Juillet')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,4,4,5,'Mai â€“ Juin');
+insert into caracteristique(id_caracte_sequence.nextval,4,4,5,'Mai â€“ Juin')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,3,4,7,'Juin â€“ Septembre');
+insert into caracteristique(id_caracte_sequence.nextval,3,4,7,'Juin â€“ Septembre')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,2,4,7,'Juin â€“ Septembre');
+insert into caracteristique(id_caracte_sequence.nextval,2,4,7,'Juin â€“ Septembre')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,4,5,6,'Juin â€“ AoÃ»t');
+insert into caracteristique(id_caracte_sequence.nextval,4,5,6,'Juin â€“ AoÃ»t')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into caracteristique(id_caracte_sequence.nextval,4,8,7,'Janvier â€“ DÃ©cembre');
+insert into caracteristique(id_caracte_sequence.nextval,4,8,7,'Janvier â€“ DÃ©cembre')
+                                                        *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> 
+SQL> commit;
+
+Validation effectuée.
+
+SQL> 
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
+insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
+                                                                                             *
+ERREUR à la ligne 1 :
+ORA-00926: mot-clé VALUES absent 
+
+
+SQL> 
+SQL> commit;
+
+Validation effectuée.
+
+SQL> 
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
+insert into choisir(id_plante_choisir_sequence.nextval,1)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
+insert into choisir(id_plante_choisir_sequence.nextval,1)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
+insert into choisir(id_plante_choisir_sequence.nextval,1)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
+insert into choisir(id_plante_choisir_sequence.nextval,1)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
+insert into choisir(id_plante_choisir_sequence.nextval,1)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
+insert into choisir(id_plante_choisir_sequence.nextval,1)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
+insert into choisir(id_plante_choisir_sequence.nextval,1)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
+insert into choisir(id_plante_choisir_sequence.nextval,1)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
+insert into choisir(id_plante_choisir_sequence.nextval,1)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
+insert into choisir(id_plante_choisir_sequence.nextval,1)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
+insert into choisir(id_plante_choisir_sequence.nextval,2)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
+insert into choisir(id_plante_choisir_sequence.nextval,2)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
+insert into choisir(id_plante_choisir_sequence.nextval,2)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
+insert into choisir(id_plante_choisir_sequence.nextval,2)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
+insert into choisir(id_plante_choisir_sequence.nextval,2)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
+insert into choisir(id_plante_choisir_sequence.nextval,2)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
+insert into choisir(id_plante_choisir_sequence.nextval,2)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
+insert into choisir(id_plante_choisir_sequence.nextval,2)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
+insert into choisir(id_plante_choisir_sequence.nextval,2)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
+insert into choisir(id_plante_choisir_sequence.nextval,2)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
+insert into choisir(id_plante_choisir_sequence.nextval,3)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
+insert into choisir(id_plante_choisir_sequence.nextval,3)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
+insert into choisir(id_plante_choisir_sequence.nextval,3)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
+insert into choisir(id_plante_choisir_sequence.nextval,3)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
+insert into choisir(id_plante_choisir_sequence.nextval,3)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
+insert into choisir(id_plante_choisir_sequence.nextval,3)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
+insert into choisir(id_plante_choisir_sequence.nextval,3)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
+insert into choisir(id_plante_choisir_sequence.nextval,3)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
+insert into choisir(id_plante_choisir_sequence.nextval,3)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
+insert into choisir(id_plante_choisir_sequence.nextval,3)
+                                                       *
+ERREUR à la ligne 1 :
+ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
+non valide 
+
+
+SQL> 
+SQL> commit;
+
+Validation effectuée.
+
+SQL> @ View_Plante
+SQL> drop view liste_plante_utilisateur;
+
+Vue supprimée.
+
+SQL> 
+SQL> create view liste_plante_utilisateur as
+  2  select nom_plante as "Nom de la Plante", nom_utilisateur as "Nom", prenom_utilisateur as "Prenom"
+  3  from plante p
+  4  join choisir c on c.id_plante = p.id_plante
+  5  join utilisateur u on c.id_utilisateur = u.id_utilisateur
+  6  ;
+
+Vue créée.
+
+SQL> 
+SQL> drop view liste_plante;
+
+Vue supprimée.
+
+SQL> 
+SQL> create view liste_plante as
+  2  select nom_plante as "Nom de la Plante", famille_plante as "Famille", description_plante as "Description", humidite, temperature, luminosite, mois_floraison as "Floraision"
+  3  from plante pl
+  4  join posseder po on po.id_plante = pl.id_plante
+  5  join caracteristique c on po.id_caracteristique = c.id_caracteristique
+  6  ;
+
+Vue créée.
+
+SQL> 
+SQL> drop view liste_utilisateur;
+
+Vue supprimée.
+
+SQL> 
+SQL> create view liste_utilisateur as
+  2  select nom_utilisateur as "Nom", prenom_utilisateur as "Prenom"
+  3  from utilisateur
+  4  ;
+
+Vue créée.
+
+SQL> @ Select_Plante
+SQL> select * from liste_plante_utilisateur;
+
+aucune ligne sélectionnée
+
+SQL> 
+SQL> select * from liste_plante;
+
+aucune ligne sélectionnée
+
+SQL> 
+SQL> select * from liste_utilisateur;
+
+Nom                            Prenom                                           
+------------------------------ --------------------                             
+DA SILVA TEIXEIRA              David                                            
+RICHARD                        Jeremy                                           
+Peyre                          Leo                                              
+
+SQL> 
+SQL> spool off
