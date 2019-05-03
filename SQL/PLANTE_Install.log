@@ -299,245 +299,125 @@ SQL> commit;
 Validation effectuée.
 
 SQL> 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,7,4,7,'Juin â€“ AoÃ»t');
-insert into caracteristique(id_caracte_sequence.nextval,7,4,7,'Juin â€“ AoÃ»t')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,7,4,7,'Juin â€“ AoÃ»t');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,2,2,6,'Mai -Juillet');
-insert into caracteristique(id_caracte_sequence.nextval,2,2,6,'Mai -Juillet')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,2,2,6,'Mai -Juillet');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,3,5,5,'Mai -Septembre');
-insert into caracteristique(id_caracte_sequence.nextval,3,5,5,'Mai -Septembre')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,3,5,5,'Mai -Septembre');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,3,4,2,'Mai â€“ Juin');
-insert into caracteristique(id_caracte_sequence.nextval,3,4,2,'Mai â€“ Juin')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,3,4,2,'Mai â€“ Juin');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,4,4,4,'Mars â€“ Mai');
-insert into caracteristique(id_caracte_sequence.nextval,4,4,4,'Mars â€“ Mai')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,4,4,4,'Mars â€“ Mai');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,3,5,7,'Juin-Septembre');
-insert into caracteristique(id_caracte_sequence.nextval,3,5,7,'Juin-Septembre')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,3,5,7,'Juin-Septembre');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,2,2,7,'Juin â€“ Septembre');
-insert into caracteristique(id_caracte_sequence.nextval,2,2,7,'Juin â€“ Septembre')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,2,2,7,'Juin â€“ Septembre');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,2,6,4,'Juillet -AoÃ»t');
-insert into caracteristique(id_caracte_sequence.nextval,2,6,4,'Juillet -AoÃ»t')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,2,6,4,'Juillet -AoÃ»t');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,6,4,6,'Mai â€“ Juillet');
-insert into caracteristique(id_caracte_sequence.nextval,6,4,6,'Mai â€“ Juillet')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,6,4,6,'Mai â€“ Juillet');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,2,4,6,'Avril â€“ Juillet');
-insert into caracteristique(id_caracte_sequence.nextval,2,4,6,'Avril â€“ Juillet')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,2,4,6,'Avril â€“ Juillet');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,3,5,5,'Juin â€“ AoÃ»t');
-insert into caracteristique(id_caracte_sequence.nextval,3,5,5,'Juin â€“ AoÃ»t')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,3,5,5,'Juin â€“ AoÃ»t');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,4,4,6,'Juin â€“ AoÃ»t');
-insert into caracteristique(id_caracte_sequence.nextval,4,4,6,'Juin â€“ AoÃ»t')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,4,4,6,'Juin â€“ AoÃ»t');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,5,6,7,'Juin â€“ Septembre');
-insert into caracteristique(id_caracte_sequence.nextval,5,6,7,'Juin â€“ Septembre')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,5,6,7,'Juin â€“ Septembre');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,3,4,5,'Juillet â€“ Octobre');
-insert into caracteristique(id_caracte_sequence.nextval,3,4,5,'Juillet â€“ Octobre')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,3,4,5,'Juillet â€“ Octobre');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,1,5,7,'Juillet â€“ Septembre');
-insert into caracteristique(id_caracte_sequence.nextval,1,5,7,'Juillet â€“ Septembre')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,1,5,7,'Juillet â€“ Septembre');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,2,6,7,'Avril â€“ Juin');
-insert into caracteristique(id_caracte_sequence.nextval,2,6,7,'Avril â€“ Juin')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,2,6,7,'Avril â€“ Juin');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,2,5,7,'Mai â€“ Juillet');
-insert into caracteristique(id_caracte_sequence.nextval,2,5,7,'Mai â€“ Juillet')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,2,5,7,'Mai â€“ Juillet');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,3,5,5,'Juillet â€“ Septembre');
-insert into caracteristique(id_caracte_sequence.nextval,3,5,5,'Juillet â€“ Septembre')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,3,5,5,'Juillet â€“ Septembre');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,4,4,3,'Mai â€“ Juillet');
-insert into caracteristique(id_caracte_sequence.nextval,4,4,3,'Mai â€“ Juillet')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,4,4,3,'Mai â€“ Juillet');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,3,5,2,'Juin â€“ Septembre');
-insert into caracteristique(id_caracte_sequence.nextval,3,5,2,'Juin â€“ Septembre')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,3,5,2,'Juin â€“ Septembre');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,3,5,2,'FÃ©vrier-Mai');
-insert into caracteristique(id_caracte_sequence.nextval,3,5,2,'FÃ©vrier-Mai')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,3,5,2,'FÃ©vrier-Mai');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,3,4,6,'Avril â€“ Juin');
-insert into caracteristique(id_caracte_sequence.nextval,3,4,6,'Avril â€“ Juin')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,3,4,6,'Avril â€“ Juin');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,3,4,5,'Avril â€“ Mai');
-insert into caracteristique(id_caracte_sequence.nextval,3,4,5,'Avril â€“ Mai')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,3,4,5,'Avril â€“ Mai');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,3,4,6,'Mai â€“ Juin');
-insert into caracteristique(id_caracte_sequence.nextval,3,4,6,'Mai â€“ Juin')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,3,4,6,'Mai â€“ Juin');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,2,5,5,'Juin â€“ Juillet');
-insert into caracteristique(id_caracte_sequence.nextval,2,5,5,'Juin â€“ Juillet')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,2,5,5,'Juin â€“ Juillet');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,4,4,5,'Mai â€“ Juin');
-insert into caracteristique(id_caracte_sequence.nextval,4,4,5,'Mai â€“ Juin')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,4,4,5,'Mai â€“ Juin');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,3,4,7,'Juin â€“ Septembre');
-insert into caracteristique(id_caracte_sequence.nextval,3,4,7,'Juin â€“ Septembre')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,3,4,7,'Juin â€“ Septembre');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,2,4,7,'Juin â€“ Septembre');
-insert into caracteristique(id_caracte_sequence.nextval,2,4,7,'Juin â€“ Septembre')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,2,4,7,'Juin â€“ Septembre');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,4,5,6,'Juin â€“ AoÃ»t');
-insert into caracteristique(id_caracte_sequence.nextval,4,5,6,'Juin â€“ AoÃ»t')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,4,5,6,'Juin â€“ AoÃ»t');
 
+1 ligne créée.
 
-SQL> insert into caracteristique(id_caracte_sequence.nextval,4,8,7,'Janvier â€“ DÃ©cembre');
-insert into caracteristique(id_caracte_sequence.nextval,4,8,7,'Janvier â€“ DÃ©cembre')
-                                                        *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into caracteristique values(id_caracte_sequence.nextval,4,8,7,'Janvier â€“ DÃ©cembre');
 
+1 ligne créée.
 
 SQL> 
 SQL> commit;
@@ -545,215 +425,125 @@ SQL> commit;
 Validation effectuée.
 
 SQL> 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
-SQL> insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
-insert into posseder(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval)
-                                                                                             *
-ERREUR à la ligne 1 :
-ORA-00926: mot-clé VALUES absent 
+SQL> insert into posseder values(id_plante_posseder_sequence.nextval,id_caracte_posseder_sequence.nextval);
 
+1 ligne créée.
 
 SQL> 
 SQL> commit;
@@ -761,245 +551,125 @@ SQL> commit;
 Validation effectuée.
 
 SQL> 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
-insert into choisir(id_plante_choisir_sequence.nextval,1)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,1);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
-insert into choisir(id_plante_choisir_sequence.nextval,1)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,1);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
-insert into choisir(id_plante_choisir_sequence.nextval,1)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,1);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
-insert into choisir(id_plante_choisir_sequence.nextval,1)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,1);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
-insert into choisir(id_plante_choisir_sequence.nextval,1)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,1);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
-insert into choisir(id_plante_choisir_sequence.nextval,1)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,1);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
-insert into choisir(id_plante_choisir_sequence.nextval,1)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,1);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
-insert into choisir(id_plante_choisir_sequence.nextval,1)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,1);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
-insert into choisir(id_plante_choisir_sequence.nextval,1)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,1);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,1);
-insert into choisir(id_plante_choisir_sequence.nextval,1)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,1);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
-insert into choisir(id_plante_choisir_sequence.nextval,2)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,2);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
-insert into choisir(id_plante_choisir_sequence.nextval,2)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,2);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
-insert into choisir(id_plante_choisir_sequence.nextval,2)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,2);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
-insert into choisir(id_plante_choisir_sequence.nextval,2)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,2);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
-insert into choisir(id_plante_choisir_sequence.nextval,2)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,2);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
-insert into choisir(id_plante_choisir_sequence.nextval,2)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,2);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
-insert into choisir(id_plante_choisir_sequence.nextval,2)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,2);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
-insert into choisir(id_plante_choisir_sequence.nextval,2)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,2);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
-insert into choisir(id_plante_choisir_sequence.nextval,2)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,2);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,2);
-insert into choisir(id_plante_choisir_sequence.nextval,2)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,2);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
-insert into choisir(id_plante_choisir_sequence.nextval,3)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,3);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
-insert into choisir(id_plante_choisir_sequence.nextval,3)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,3);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
-insert into choisir(id_plante_choisir_sequence.nextval,3)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,3);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
-insert into choisir(id_plante_choisir_sequence.nextval,3)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,3);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
-insert into choisir(id_plante_choisir_sequence.nextval,3)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,3);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
-insert into choisir(id_plante_choisir_sequence.nextval,3)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,3);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
-insert into choisir(id_plante_choisir_sequence.nextval,3)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,3);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
-insert into choisir(id_plante_choisir_sequence.nextval,3)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,3);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
-insert into choisir(id_plante_choisir_sequence.nextval,3)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,3);
 
+1 ligne créée.
 
-SQL> insert into choisir(id_plante_choisir_sequence.nextval,3);
-insert into choisir(id_plante_choisir_sequence.nextval,3)
-                                                       *
-ERREUR à la ligne 1 :
-ORA-01747: spécification utilisateur.table.colonne, table.colonne ou colonne 
-non valide 
+SQL> insert into choisir values(id_plante_choisir_sequence.nextval,3);
 
+1 ligne créée.
 
 SQL> 
 SQL> commit;
@@ -1052,12 +722,1062 @@ Vue créée.
 SQL> @ Select_Plante
 SQL> select * from liste_plante_utilisateur;
 
-aucune ligne sélectionnée
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Nom                            Prenom                                           
+------------------------------ --------------------                             
+Butome en ombelle                                                               
+DA SILVA TEIXEIRA              David                                            
+                                                                                
+Muguet                                                                          
+DA SILVA TEIXEIRA              David                                            
+                                                                                
+Digitale pourpre                                                                
+DA SILVA TEIXEIRA              David                                            
+                                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Nom                            Prenom                                           
+------------------------------ --------------------                             
+AspÃ©rule odorante                                                              
+DA SILVA TEIXEIRA              David                                            
+                                                                                
+Lierre terrestre                                                                
+DA SILVA TEIXEIRA              David                                            
+                                                                                
+Cannabis                                                                        
+DA SILVA TEIXEIRA              David                                            
+                                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Nom                            Prenom                                           
+------------------------------ --------------------                             
+Houblon                                                                         
+DA SILVA TEIXEIRA              David                                            
+                                                                                
+Hysope                                                                          
+DA SILVA TEIXEIRA              David                                            
+                                                                                
+Iris fÃ©tide                                                                    
+DA SILVA TEIXEIRA              David                                            
+                                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Nom                            Prenom                                           
+------------------------------ --------------------                             
+Iris faux acore                                                                 
+DA SILVA TEIXEIRA              David                                            
+                                                                                
+Knautie des champs                                                              
+RICHARD                        Jeremy                                           
+                                                                                
+Gesse des bois                                                                  
+RICHARD                        Jeremy                                           
+                                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Nom                            Prenom                                           
+------------------------------ --------------------                             
+Salicaire commune                                                               
+RICHARD                        Jeremy                                           
+                                                                                
+Menthe pouliot                                                                  
+RICHARD                        Jeremy                                           
+                                                                                
+Origan commun                                                                   
+RICHARD                        Jeremy                                           
+                                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Nom                            Prenom                                           
+------------------------------ --------------------                             
+AnÃ©mone pulsatille                                                             
+RICHARD                        Jeremy                                           
+                                                                                
+Sauge des prÃ©s                                                                 
+RICHARD                        Jeremy                                           
+                                                                                
+Scabieuse blanchÃ¢tre                                                           
+RICHARD                        Jeremy                                           
+                                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Nom                            Prenom                                           
+------------------------------ --------------------                             
+SilÃ¨ne penchÃ©                                                                 
+RICHARD                        Jeremy                                           
+                                                                                
+Ã‰piaire des bois                                                               
+RICHARD                        Jeremy                                           
+                                                                                
+Petite pervenche                                                                
+Peyre                          Leo                                              
+                                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Nom                            Prenom                                           
+------------------------------ --------------------                             
+Violette des chiens                                                             
+Peyre                          Leo                                              
+                                                                                
+Fusain dâ€™Europe                                                               
+Peyre                          Leo                                              
+                                                                                
+Rosier des chiens                                                               
+Peyre                          Leo                                              
+                                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Nom                            Prenom                                           
+------------------------------ --------------------                             
+Rosier pimprenelle                                                              
+Peyre                          Leo                                              
+                                                                                
+Viorne obier                                                                    
+Peyre                          Leo                                              
+                                                                                
+AchillÃ©e millefeuille                                                          
+Peyre                          Leo                                              
+                                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Nom                            Prenom                                           
+------------------------------ --------------------                             
+Bugle de GenÃ¨ve                                                                
+Peyre                          Leo                                              
+                                                                                
+Guimauve officinale                                                             
+Peyre                          Leo                                              
+                                                                                
+PÃ¢querette                                                                     
+Peyre                          Leo                                              
+                                                                                
+
+30 ligne(s) sélectionnée(s).
 
 SQL> 
 SQL> select * from liste_plante;
 
-aucune ligne sélectionnée
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Butome en ombelle                                                               
+Butomaceae                                                                      
+Plante vivace de 50 cm Ã  1 mÃ¨tre, glabre, Ã  souchehorizontale charnue        
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+         7           4          7                                               
+Juin â€“ AoÃ»t                                                                  
+                                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Muguet                                                                          
+Asparagaceae                                                                    
+Plante vivace de 30-60 cm, glabre, Ã  souche horizontale Ã©paisse trÃ¨s fibreuse
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+         2           2          6                                               
+Mai -Juillet                                                                    
+                                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Digitale pourpre                                                                
+Plantaginaceae                                                                  
+Plante bisannuelle ou vivace de 50 cm Ã  1 m. 50, tomenteuse-blanchÃ¢tre, Ã  tig
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+e robuste, creuse, lÃ¢chement feuillÃ©e                                         
+         3           5          5                                               
+Mai -Septembre                                                                  
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+                                                                                
+AspÃ©rule odorante                                                              
+Rubiaceae                                                                       
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Plante vivace de 10-30 cm, glabre, noirÃ¢tre et odorante aprÃ¨s la dessiccation,
+ Ã  souche grÃªle, longuement traÃ§ante                                         
+         3           4          2                                               
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Mai â€“ Juin                                                                    
+                                                                                
+Lierre terrestre                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Lamiaceae                                                                       
+Plante vivace, mollement poilue, couchÃ©e-radicante, Ã  tiges florifÃ¨res redres
+sÃ©es, simples, longues de 5-25 cm                                              
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+         4           4          4                                               
+Mars â€“ Mai                                                                    
+                                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Cannabis                                                                        
+Cannabaceae                                                                     
+Plante annuelle de 1-2 mÃ¨tres, pubescente-rude, Ã  odeur forte                 
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+         3           5          7                                               
+Juin-Septembre                                                                  
+                                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Houblon                                                                         
+Cannabaceae                                                                     
+Plante vivace de 2-5 mÃ¨tres, rude, Ã  tiges herbacÃ©es, sarmenteuses-volubiles,
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+ rameuses                                                                       
+         2           2          7                                               
+Juin â€“ Septembre                                                              
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+                                                                                
+Hysope                                                                          
+Lamiaceae                                                                       
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Plante vivace de 20-50 cm, glabre ou glabrescente, verte, aromatique            
+         2           6          4                                               
+Juillet -AoÃ»t                                                                  
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+                                                                                
+Iris fÃ©tide                                                                    
+Iridaceae                                                                       
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Plante vivace de 30-80 cm, glabre, fÃ©tide par le froissement, Ã  rhizome Ã©pais
+         6           4          6                                               
+Mai â€“ Juillet                                                                 
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+                                                                                
+Iris faux acore                                                                 
+Iridaceae                                                                       
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Plante vivace de 40 cm Ã  1 mÃ¨tre, glabre, inodore, Ã  rhizome Ã©pais          
+         2           4          6                                               
+Avril â€“ Juillet                                                               
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+                                                                                
+Knautie des champs                                                              
+Caprifoliaceae                                                                  
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Plante vivace de 20-80 cm, velue, Ã  souche Ã©paisse et oblique                 
+         3           5          5                                               
+Juin â€“ AoÃ»t                                                                  
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+                                                                                
+Gesse des bois                                                                  
+Gesse des bois                                                                  
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Plante vivace de 1 Ã  2 mÃ¨tres, glabre                                         
+         4           4          6                                               
+Juin â€“ AoÃ»t                                                                  
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+                                                                                
+Salicaire commune                                                               
+Lythraceae                                                                      
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Plante vivace de 50 cm, Ã  1 mÃ¨tre, dressÃ©e, robuste, pubescente dans le haut,
+ Ã  souche Ã©paisse                                                             
+         5           6          7                                               
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Juin â€“ Septembre                                                              
+                                                                                
+Menthe pouliot                                                                  
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Lamiaceae                                                                       
+Plante vivace de 10-50 cm, velue-grisÃ¢tre ou glabrescente, Ã  odeur trÃ¨s forte
+         3           4          5                                               
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Juillet â€“ Octobre                                                             
+                                                                                
+Origan commun                                                                   
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Lamiaceae                                                                       
+Plante vivace de 30-80 cm, poilue, souvent rougeÃ¢tre, aromatique               
+         1           5          7                                               
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Juillet â€“ Septembre                                                           
+                                                                                
+AnÃ©mone pulsatille                                                             
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+AnÃ©mone pulsatille                                                             
+Fleur mÃ©dicinale vivace                                                        
+         2           6          7                                               
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Avril â€“ Juin                                                                  
+                                                                                
+Sauge des prÃ©s                                                                 
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Lamiaceae                                                                       
+Plante vivace de 35-80 cm, velue, simple ou peu rameuse, odorante               
+         2           5          7                                               
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Mai â€“ Juillet                                                                 
+                                                                                
+Scabieuse blanchÃ¢tre                                                           
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Caprifoliaceae                                                                  
+Plante vivace de 20-40 cm, glabrescente, Ã  tiges peu rameuses, feuillÃ©es      
+         3           5          5                                               
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Juillet â€“ Septembre                                                           
+                                                                                
+SilÃ¨ne penchÃ©                                                                 
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Caryophyllaceae                                                                 
+Plante vivace, velue, Ã  souche presque ligneuse tiges de 20-50 cm, simples ou p
+eu rameuses, visqueuses dans le haut, peu feuillÃ©es                            
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+         4           4          3                                               
+Mai â€“ Juillet                                                                 
+                                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Ã‰piaire des bois                                                               
+Ã‰piaire des bois                                                               
+Ortie puante. Plante vivace de 30 cm Ã  1 mÃ¨tre, trÃ¨s velue, verte, Ã  souche 
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+rampante, Ã  odeur fÃ©tide                                                      
+         3           5          2                                               
+Juin â€“ Septembre                                                              
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+                                                                                
+Petite pervenche                                                                
+Apocynaceae                                                                     
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Plante vivace, glabre, couchÃ©e-diffuse, Ã  tiges persistantes, radicantes, long
+ues de 1-2 mÃ¨tres                                                              
+         3           5          2                                               
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+FÃ©vrier-Mai                                                                    
+                                                                                
+Violette des chiens                                                             
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Violaceae                                                                       
+Tiges de 5-40 cm, herbacÃ©es, dressÃ©es ou ascendantes, naissant de la souche   
+         3           4          6                                               
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Avril â€“ Juin                                                                  
+                                                                                
+Fusain dâ€™Europe                                                               
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Celastraceae                                                                    
+Rameaux tÃ©tragones, verts feuilles moyennes, de 4-0 cm de long, elliptiques ou 
+ovales-lancÃ©olÃ©es                                                             
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+         3           4          5                                               
+Avril â€“ Mai                                                                   
+                                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Rosier des chiens                                                               
+Rosaceae                                                                        
+Arbrisseau de 1 Ã  3 mÃ¨tres, gÃ©nÃ©ralement verdÃ¢tre et Ã  rameaux robustes, d
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+ressÃ©s                                                                         
+         3           4          6                                               
+Mai â€“ Juin                                                                    
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+                                                                                
+Rosier pimprenelle                                                              
+Rosaceae                                                                        
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Arbrisseau peu Ã©levÃ©, souvent nain, Ã  souche traÃ§ante, aiguillons nombreux, 
+droits, inÃ©gaux, entremÃªlÃ©s d acicules                                       
+         2           5          5                                               
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Juin â€“ Juillet                                                                
+                                                                                
+Viorne obier                                                                    
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Viorne obier                                                                    
+Arbrisseau de 2-4 mÃ¨tres, Ã  rameaux fragiles, glabres, d un gris blanchÃ¢tre, 
+Viorne obier                                                                    
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+         4           4          5                                               
+Mai â€“ Juin                                                                    
+                                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+AchillÃ©e millefeuille                                                          
+Asteraceae                                                                      
+Plante vivace Ã  racine rampante tiges de 2-7 dm, dressÃ©es, pubescentes, parfoi
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+s laineuses ainsi que les feuilles                                              
+         3           4          7                                               
+Juin â€“ Septembre                                                              
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+                                                                                
+Bugle de GenÃ¨ve                                                                
+Lamiaceae                                                                       
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Plante vivace de 10-40 cm, inodore, sans rejets rampants tiges dressÃ©es, simple
+s, velues-laineuses tout autour, peu feuillÃ©es                                 
+         2           4          7                                               
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Juin â€“ Septembre                                                              
+                                                                                
+Guimauve officinale                                                             
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+Malvaceae                                                                       
+Plante vivace, toute veloutÃ©e-blanchÃ¢tre, Ã  racine Ã©paisse, blanche tiges d 
+environ 1 mÃ¨tre, dressÃ©es, robustes, Malvaceae                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+         4           5          6                                               
+Juin â€“ AoÃ»t                                                                  
+                                                                                
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+PÃ¢querette                                                                     
+Asteraceae                                                                      
+Plante Ã  fibres, trÃ¨s grÃªles tiges, mesure 3-10 cm rarement plus, grÃªles    
+
+Nom de la Plante                                                                
+--------------------------------------------------------------------------------
+Famille                                                                         
+--------------------------------------------------------------------------------
+Description                                                                     
+--------------------------------------------------------------------------------
+  HUMIDITE TEMPERATURE LUMINOSITE                                               
+---------- ----------- ----------                                               
+Floraision                                                                      
+--------------------------------------------------------------------------------
+         4           8          7                                               
+Janvier â€“ DÃ©cembre                                                           
+                                                                                
+
+30 ligne(s) sélectionnée(s).
 
 SQL> 
 SQL> select * from liste_utilisateur;
