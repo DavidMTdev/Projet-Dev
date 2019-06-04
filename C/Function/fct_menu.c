@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <windows.h>
 #include "../header.h"
+#include <windows.h>
+#include <mysql.h>
 
 int choix;
 
@@ -11,7 +13,7 @@ void Color(int Texte, int Fond)
     SetConsoleTextAttribute(H, Fond * 16 + Texte);
 }
 
-void menu(int plante)
+void menu(int plante, int user)
 {
     int humidite = 7;
     int luminosite = 7;
@@ -27,7 +29,8 @@ void menu(int plante)
     printf("1. Choix de la plante\n\n");
     printf("2. Caracteristiques de la plante\n\n");
     printf("3. Liste des plantes\n\n");
-    printf("4. Quitter\n\n\n");
+    printf("4. Liste des plantes de l'utilisateur\n\n");
+    printf("5. Quitter\n\n\n");
     Color(2, 0);
     printf("Quel est votre choix ? ");
     scanf("%d", &choix);
@@ -36,37 +39,7 @@ void menu(int plante)
 
     if (choix == 1)
     {
-        //Mettre le choix de la plante
-        printf("1. Butome en ombrelle\n");
-        printf("2. Muguet\n");
-        printf("3. Digitale Pourpre\n");
-        printf("4. Asperule odorante\n");
-        printf("5. Lierre terrestre\n");
-        printf("6. Cannabis\n");
-        printf("7. Houblon\n");
-        printf("8. Iris fetide\n");
-        printf("9. Iris faux acore\n");
-        printf("10. Knautie des champs\n");
-        printf("11. Gesse des bois\n");
-        printf("12. Salicaire commune\n");
-        printf("13. Menthe pouliot\n");
-        printf("14. Origan commun\n");
-        printf("15. Anemone pulsatille\n");
-        printf("16. Sauge des pres\n");
-        printf("17. Scabieuse blanchatre\n");
-        printf("18. Silene penche\n");
-        printf("19. Epiaire des bois\n");
-        printf("20. Petite pervenche\n");
-        printf("21. Violette des chiens\n");
-        printf("22. Fusain d Europe\n");
-        printf("23. Rosier des chiens\n");
-        printf("24. Rosier pimprenelle\n");
-        printf("25. Viorne obier\n");
-        printf("26. Achillee millefeuille\n");
-        printf("27. Bugle de Geneve\n");
-        printf("28. Guimauve officinale\n");
-        printf("29. Paquerette\n");
-        printf("30. Hysope\n");
+        showChoicePlante();
 
         Color(2, 0);
         printf("Quel est votre choix ? ");
@@ -74,7 +47,7 @@ void menu(int plante)
         printf("\n");
         Color(15, 0);
 
-        menu(plante);
+        insertChoice(plante, user);
     }
 
     else if (choix == 2)
@@ -83,53 +56,127 @@ void menu(int plante)
         if (!(plante == 0))
         {
             ChoixPlante(plante, humidite, luminosite, temperature, mois);
-            menu(plante);
+            menu(plante, user);
         }
         else
         {
-            menu(plante);
+            menu(plante, user);
         }
     }
 
     else if (choix == 3)
     {
         //Mettre la liste des plantes
-        printf("1. Butome en ombrelle\n");
-        printf("2. Muguet\n");
-        printf("3. Digitale Pourpre\n");
-        printf("4. Asperule odorante\n");
-        printf("5. Lierre terrestre\n");
-        printf("6. Cannabis\n");
-        printf("7. Houblon\n");
-        printf("8. Iris fetide\n");
-        printf("9. Iris faux acore\n");
-        printf("10. Knautie des champs\n");
-        printf("11. Gesse des bois\n");
-        printf("12. Salicaire commune\n");
-        printf("13. Menthe pouliot\n");
-        printf("14. Origan commun\n");
-        printf("15. Anemone pulsatille\n");
-        printf("16. Sauge des pres\n");
-        printf("17. Scabieuse blanchatre\n");
-        printf("18. Silene penche\n");
-        printf("19. Epiaire des bois\n");
-        printf("20. Petite pervenche\n");
-        printf("21. Violette des chiens\n");
-        printf("22. Fusain d Europe\n");
-        printf("23. Rosier des chiens\n");
-        printf("24. Rosier pimprenelle\n");
-        printf("25. Viorne obier\n");
-        printf("26. Achillee millefeuille\n");
-        printf("27. Bugle de Geneve\n");
-        printf("28. Guimauve officinale\n");
-        printf("29. Paquerette\n");
-        printf("30. Hysope\n");
-        menu(plante);
+        showListPlante();
+        menu(plante, user);
     }
-
     else if (choix == 4)
     {
-        //Troiver un moyen de stopper le script
+        //Mettre la liste des plantes de l'utilisateur
+        showListPlanteUser(user);
+        menu(plante, user);
+    }
+    else if (choix == 5)
+    {
+        //Stop le script
         return 0;
     }
+    else
+    {
+        menu(plante, user);
+    }
+}
+
+void showListPlante()
+{
+    MYSQL mysql;
+    mysql_init(&mysql);
+    mysql_options(&mysql, MYSQL_READ_DEFAULT_GROUP, "option");
+    mysql_real_connect(&mysql, "127.0.0.1", "root", "", "projet_dev", 0, NULL, 0);
+
+    mysql_query(&mysql, "SELECT * FROM plante");
+
+    MYSQL_RES *result;
+    MYSQL_ROW row;
+
+    result = mysql_store_result(&mysql);
+
+    while ((row = mysql_fetch_row(result)) != NULL)
+    {
+        for (int i = 0; i < mysql_num_fields(result); i++)
+        {
+            printf("%s | ", row[i]);
+        }
+        printf("\n");
+    }
+
+    mysql_free_result(result);
+}
+
+void showChoicePlante()
+{
+    MYSQL mysql;
+    mysql_init(&mysql);
+    mysql_options(&mysql, MYSQL_READ_DEFAULT_GROUP, "option");
+    mysql_real_connect(&mysql, "127.0.0.1", "root", "", "projet_dev", 0, NULL, 0);
+
+    mysql_query(&mysql, "SELECT * FROM plante");
+
+    MYSQL_RES *result;
+    MYSQL_ROW row;
+
+    result = mysql_store_result(&mysql);
+
+    while ((row = mysql_fetch_row(result)) != NULL)
+    {
+        printf("[%s. %s]", row[0], row[1]);
+        printf("\n");
+    }
+
+    mysql_free_result(result);
+}
+
+void insertChoice(int choice, int user)
+{
+
+    MYSQL mysql;
+    mysql_init(&mysql);
+    mysql_options(&mysql, MYSQL_READ_DEFAULT_GROUP, "option");
+    mysql_real_connect(&mysql, "127.0.0.1", "root", "", "projet_dev", 0, NULL, 0);
+
+    char requete[50] = "";
+
+    sprintf(requete, "INSERT INTO choisir VALUES('%d', '%d')", choice, user);
+    mysql_query(&mysql, requete);
+
+    menu(choice, user);
+}
+
+void showListPlanteUser(int user)
+{
+    MYSQL mysql;
+    mysql_init(&mysql);
+    mysql_options(&mysql, MYSQL_READ_DEFAULT_GROUP, "option");
+    mysql_real_connect(&mysql, "127.0.0.1", "root", "", "projet_dev", 0, NULL, 0);
+
+    char requete[500] = "";
+
+    sprintf(requete, "SELECT p.id_plante, nom_plante, description_plante, famille_plante FROM plante p JOIN choisir c ON c.id_plante = p.id_plante WHERE c.id_utilisateur = %d", user);
+    mysql_query(&mysql, requete);
+
+    MYSQL_RES *result;
+    MYSQL_ROW row;
+
+    result = mysql_store_result(&mysql);
+
+    while ((row = mysql_fetch_row(result)) != NULL)
+    {
+        for (int i = 0; i < mysql_num_fields(result); i++)
+        {
+            printf("%s | ", row[i]);
+        }
+        printf("\n");
+    }
+
+    mysql_free_result(result);
 }
