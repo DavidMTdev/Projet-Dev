@@ -17,3 +17,5 @@ void showInfo(char *nom_plante, char *categorie_plante, char *description_plante
 void insertChoice(int choice, int user);
 
 void showListPlanteUser(int user);
+
+void Color(int Texte, int Fond);
